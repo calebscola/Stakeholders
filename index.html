@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stakeholders</title>
+</head>
+<body style="text-align:center; padding-top: 50px;">
+
+<h1>Starting Presentation...</h1>
+<p>If nothing happens, <a href="https://docs.google.com/presentation/d/e/2PACX-1vS3Wqpkok9BrNuh4858wLZ4zKng-lofhr9ua161lvjXPR38j8vsnqOEfXPIYf52RD1e9LomufaAdSdH/pub?start=true&loop=false&delayms=15000" target="_blank">click here to open the slides</a>.</p>
+
+<audio id="bg-music" src="https://audio.jukehost.co.uk/QiLQHDvU69bmJDI5VkKnQAvWvaaXpdl4" autoplay loop></audio>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  audio.volume = 0.5;
+
+  // Try to autoplay audio and open the slides
+  audio.play().then(() => {
+    window.open(
+      "https://docs.google.com/presentation/d/e/2PACX-1vS3Wqpkok9BrNuh4858wLZ4zKng-lofhr9ua161lvjXPR38j8vsnqOEfXPIYf52RD1e9LomufaAdSdH/pub?start=true&loop=false&delayms=15000",
+      "_blank"
+    );
+  }).catch(() => {
+    const btn = document.createElement('button');
+    btn.textContent = 'Click to Start Music and Slides';
+    btn.style.fontSize = '18px';
+    btn.onclick = () => {
+      audio.play();
+      window.open(
+        "https://docs.google.com/presentation/d/e/2PACX-1vS3Wqpkok9BrNuh4858wLZ4zKng-lofhr9ua161lvjXPR38j8vsnqOEfXPIYf52RD1e9LomufaAdSdH/pub?start=true&loop=false&delayms=15000",
+        "_blank"
+      );
+      btn.remove();
+    };
+    document.body.appendChild(btn);
+  });
+</script>
+
+</body>
+</html>
